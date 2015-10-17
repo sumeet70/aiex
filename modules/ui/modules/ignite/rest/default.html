@@ -1,0 +1,44 @@
+<div ng-controller="IgniteRestController">
+    <div class="bg-light lter b-b wrapper">
+    <div class="row">
+        <div class="col-sm-3 col-xs-12">
+            <h1 class="m-n font-thin h3 text-black">Ignite Browser</h1>
+        </div>
+    </div>
+</div>
+    <div class="hbox hbox-auto-xs hbox-auto-sm ng-scope" >
+        <div class="col bg-white-only" page-sizer footerContainer="app-footer">
+            <div class="col-sm-12 m-t">
+                <tabset class="tab-container">
+                    <tab select="loadTopology()">
+                        <tab-heading>
+                            <i class="fa fa-sitemap"></i> Topology
+                        </tab-heading>
+                        <div ng-include=" 'modules/ignite/topology/default.html' "></div>
+                        <div style="clear:both;"></div>
+                    </tab>
+                    <tab>
+                        <tab-heading>
+                            <i class="glyphicon glyphicon-th"></i> Cache
+                        </tab-heading>
+                        <div ng-include=" 'modules/ignite/cache/default.html' "></div>
+                        <div style="clear:both;"></div>
+                    </tab>
+                    <tab>
+                        <tab-heading>
+                            <i class="glyphicon glyphicon-list-alt"></i> Logs
+                        </tab-heading>
+                    </tab>
+                    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+                        {{tab.content}}
+                    </tab>
+                    <tab>
+                        <tab-heading>
+                            <i class="glyphicon glyphicon-info-sign"></i> About
+                        </tab-heading>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+    </div>
+</div>

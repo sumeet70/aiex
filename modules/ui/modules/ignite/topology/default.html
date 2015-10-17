@@ -1,0 +1,23 @@
+<div ng-controller="TopologyController">
+    <div ng-repeat="node in nodes" class="col-sm-4" >
+        <div class="panel panel-default">
+            <div class="panel-heading">Node Id:  <span class="label bg-success">{{node.nodeId}}</span></div>
+            <div class="panel-body">
+                Attributes: <strong>{{node.attributes}}</strong><br>
+                Caches: <strong>{{node.caches}}</strong><br>
+                Consistent Id:<br/>
+                    <div class="m-l" ng-repeat="consistentId in node.consistentId">
+                        <strong>{{consistentId}}</strong>
+                    </div>
+                DefaultCacheMode: <strong>{{node.defaultCacheMode}}</strong><br>
+                Metrics: <strong>{{node.metrics}}</strong><br>
+                Tcp Addresses: <br>
+                    <div class="m-l" ng-repeat="address in node.tcpAddresses">
+                        <strong>{{address}}</strong>
+                    </div>
+                Tcp Host Names: <strong>{{node.tcpHostNames}}</strong><br>
+                Tcp Port: <strong>{{node.tcpPort}}</strong><br>
+            </div>
+        </div>
+    </div>
+</div>

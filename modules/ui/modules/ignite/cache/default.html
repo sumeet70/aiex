@@ -1,0 +1,39 @@
+<div class="col-sm-12" ng-controller="CacheController">
+    <form role="form" class="form-inline">
+        <div ng-repeat="cacheItem in cacheItems">
+            <div class="form-group">
+                <label ng-if="$first">Key</label><br/>
+                <input type="text" ng-model="cacheItem.key" class="form-control" placeholder="Enter key">
+            </div>
+            <div class="form-group">
+                <label ng-if="$first">Value</label><br/>
+                <input type="text" ng-model="cacheItem.value" class="form-control" placeholder="Enter Value">
+            </div>
+            <div class="form-group">
+                <label ng-if="$first">Compare</label><br/>
+                <input type="text" ng-model="cacheItem.casValue" class="form-control" placeholder="Enter Compare Value">
+            </div>
+            <div class="form-group" ng-if="$last"><label ng-if="$first"></label><br> <i ng-click="addItem()" class="m-l fa fa-plus"></i></div>
+            <div class="form-group" ng-if="!$last && cacheItems.length>1"><label ng-if="$first"></label><br> <i ng-click="removeItem(cacheItem.id)" class=" m-l fa fa-minus"></i></div>
+        </div>
+        <br/><br/>
+        <div class="form-group">
+            <label>Cache Name</label><br/>
+            <input type="text" ng-model="cacheName" class="form-control" placeholder="Cache Name (optional)">
+        </div>
+        <div class="form-group">
+            <label>Node Id</label><br/>
+            <input type="text" ng-model="nodeId" class="form-control" placeholder="Destination Node Id (optional)">
+        </div>
+        <br/><br/>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="putall()">Put</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="getall()">Get</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="add()">Add</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="rmvall()">Remove</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="replace()">Replace</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="append()">Append</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="prepend()">Prepend</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="cas()">Compare And Swap</button>
+    </form>
+    <toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
+</div>
