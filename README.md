@@ -4,7 +4,7 @@ Apache Ignite Extensions
 <h2> Summary </h2>
 
 Apache Ignite Extensions is a modular system to create user interface modules for interacting with application deployed
-Apache Ignite.
+in Apache Ignite.
 
 <h2> Current Features</h2>
 <ul>
