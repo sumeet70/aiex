@@ -2,7 +2,7 @@
 	"aside" : {
 		"nav" : {
 			"HEADER" : "Modules",
-			"INTERACT" : "Ignite Browser",
+			"INTERACT" : "Ignite Browser"
 		}
 	}
 }
