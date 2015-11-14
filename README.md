@@ -5,25 +5,19 @@ Apache Ignite Extensions
     <li>Summary</li>
     <li>Current Features</li>
     <li><a href="#hti">How to Install</a></li>
+    <li><a href="#ug">Usage Guide</a></li>
 </ul>
 
-
-
 <h2> Summary </h2>
-
 Apache Ignite Extensions is a modular system to create user interface modules for interacting with application deployed
-in Apache Ignite.
+in Apache Ignite.<br/>
 
-<img href="docs/img/aiex.jpg" />
+<img src="https://cloud.githubusercontent.com/assets/2068430/11163038/752911c0-8ae6-11e5-8abf-e57ccb1ed485.png" />
 
 <h2> Current Features</h2>
 <ul>
     <li>User interface for cache operations exposed by Apache Ignite rest api</li>
 </ul>
-
-<h2> Usage Guide</h2>
-The application backend runs in node using express as middleware.
-The front end of the application has been written in Angularjs 1.4.
 
 <h2><a name="hti"></a> How To Install</h2>
 
@@ -135,7 +129,7 @@ These instructions assume that you already have npm and git on your path
 The application backend runs in node using express as middleware.
 The front end of the application has been written in Angularjs 1.4.
 
-
-<h3>
-Stay tuned for more !!
-</h3>
+<h2><a name="ug"></a> Usage Guide</h2>
+<p>
+Coming Soon..
+</p>
