@@ -14,6 +14,8 @@ Apache Ignite Extensions
 Apache Ignite Extensions is a modular system to create user interface modules for interacting with application deployed
 in Apache Ignite.
 
+<img href="docs/img/aiex.jpg" />
+
 <h2> Current Features</h2>
 <ul>
     <li>User interface for cache operations exposed by Apache Ignite rest api</li>
@@ -43,8 +45,6 @@ Given below is the overall setup process:
 <h3>Ubuntu</h3>
 <p>
     These instructions were tested on freshly provisioned EC2 server ubuntu-trusty-14.04-amd64. Your mileage may vary depending on your OS.
-    If you are on ubuntu-trusty, there is a combined snippet at the bottom of these instructions.
-    Simply paste it into your shell and you should be good to go.
 </p>
 
 <h4>Step 1: Install git</h4>
@@ -94,12 +94,11 @@ Given below is the overall setup process:
 
 
 <h4>Step 5: Install all npm packages</h4>
-<p>Change the current directory to project root (
+<p>Change the current directory to project root and install npm dependencies</p>
+<p>
     <code>
         cd aiex
-    </code> ) and then run the following command:
-</p>
-<p>
+    </code> <br/>
     <code>
         npm install
     </code>
@@ -119,22 +118,6 @@ Given below is the overall setup process:
         npm start
     </code>
 </p>
-
-<h4>This is what complete setup looks like</h4>
-<p>
-    <code>sudo apt-get update </code><br/>
-    <code>sudo apt-get install git</code><br/>
-    <code>curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -</code><br/>
-    <code>sudo apt-get install -y nodejs</code><br/>
-    <code>git clone https://github.com/sumeet70/aiex.git</code><br/>
-    <code>sudo npm install bower -g</code><br/>
-    <code>cd aiex</code><br/>
-    <code>npm install</code><br/>
-    <code>bower install</code><br/>
-    <code>npm start</code><br/>
-</p>
-
-
 
 
 <h3><a name="qs"></a>Quick Setup</h3>
