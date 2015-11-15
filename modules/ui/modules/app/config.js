@@ -29,5 +29,5 @@ var app = angular.module('app')
 
 
 app.getUrl = function(path){
-    return "http://localhost/api/ignite/" + path;
+    return "/api/ignite/" + path;
 };

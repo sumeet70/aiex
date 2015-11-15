@@ -36,9 +36,9 @@ Given below is the overall setup process:
     <li>Start the server by running: <b>npm start</b></li>
 </ul>
 
-<h3>Ubuntu</h3>
+<h2>Ubuntu</h2>
 <p>
-    These instructions were tested on freshly provisioned EC2 server ubuntu-trusty-14.04-amd64. Your mileage may vary depending on your OS.
+    Following instructions were tested on freshly provisioned EC2 server ubuntu-trusty-14.04-amd64. Your mileage may vary depending on your OS.
 </p>
 
 <h4>Step 1: Install git</h4>
@@ -114,15 +114,87 @@ Given below is the overall setup process:
 </p>
 
 
+<h2>Windows</h2>
+<p>
+    Following instructions were tested on freshly provisioned EC2 windows machine. Your mileage may vary depending on your OS.
+</p>
+
+<h4>Step 1: Install git</h4>
+<p>
+    http://git-scm.com/download/win
+</p>
+<p>
+    For information on how to install git for you operating system please refer to:
+    https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.
+</p>
+
+
+<h4>Step 2: Install nodejs</h4>
+<p>
+    <code>
+        https://nodejs.org/en/download/
+    </code>
+</p>
+<p>
+    For information on how to install nodejs for you operating system please refer to:
+    https://nodejs.org/en/download/package-manager/
+</p>
+
+
+<h4>Step 3: Clone the repo</h4>
+<p>
+    <code>
+        git clone https://github.com/sumeet70/aiex.git
+    </code><br/>
+</p>
+
+<h4>Step 4: Install bower</h4>
+<p>
+    <code>
+        npm install bower -g
+    </code>
+</p>
+
+
+<h4>Step 5: Install all npm packages</h4>
+<p>Change the current directory to project root and install npm dependencies</p>
+<p>
+    <code>
+        cd aiex
+    </code> <br/>
+    <code>
+        npm install
+    </code>
+</p>
+
+
+<h4>Step 6: Install all bower packages</h4>
+<p>
+    <code>
+        bower install
+    </code>
+</p>
+
+<h4>Step 7: Start the server</h4>
+<p>
+    <code>
+        npm start
+    </code>
+</p>
+
+
+
 <h3><a name="qs"></a>Quick Setup</h3>
 Follow these instructions if you are already setup with node, npm, bower and git. <br/>
 These instructions assume that you already have npm and git on your path
 <ul>
     <li>Clone the repo</li>
     <li>Open your favorite shell and navigate to the root of the project</li>
-    <li>Install all npm packages by running: <b>npm install</b></li>
-    <li>Install all bower packages by running: <b>bower install</b></li>
-    <li>Start the server by running: <b>npm start</b></li>
+    <li>Run the following commands: <br/>
+        <b>&nbsp;&nbsp; npm install</b><br/>
+        <b>&nbsp;&nbsp; bower install</b><br/>
+        <b>&nbsp;&nbsp; npm start</b><br/>
+    </li>
     <li>Navigate to http://localhost:8080</li>
 </ul>
 
