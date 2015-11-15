@@ -28,14 +28,12 @@
                         <tab-heading>
                             <i class="glyphicon glyphicon-list-alt"></i> Logs
                         </tab-heading>
+                        <div>
+                            Pending implementation. Waiting for underlying bug in Apache Ignite rest api to be fixed.
+                        </div>
                     </tab>
                     <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
-                        {{tab.content}}
-                    </tab>
-                    <tab>
-                        <tab-heading>
-                            <i class="glyphicon glyphicon-info-sign"></i> About
-                        </tab-heading>
+
                     </tab>
                 </tabset>
             </div>
