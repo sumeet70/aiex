@@ -6,7 +6,7 @@ Apache Ignite Extensions
     <li><a href="#cf">Current Features</a></li>
     <li><a href="#hti">How to Install</a></li>
     <li><a href="#ug">Usage Guide</a></li>
-    <li><a href="#uf">Usage Guide</a></li>
+    <li><a href="#uf">Upcoming Features</a></li>
 </ul>
 
 <h2><a name="s"></a> Summary </h2>
@@ -16,7 +16,7 @@ in Apache Ignite.<br/>
 <img src="https://cloud.githubusercontent.com/assets/2068430/11163038/752911c0-8ae6-11e5-8abf-e57ccb1ed485.png" />
 
 <h2><a name="cf"></a> Current Features</h2>
-aeix can currently show a basic view of topology and supports all cache based operations.
+aeix can currently shows a basic view of topology and supports invocation of all caching related operations.
 
 <ul>
     <li>Topology Viewer</li>
@@ -33,7 +33,7 @@ aeix can currently show a basic view of topology and supports all cache based op
 <h2><a name="hti"></a> How To Install</h2>
 
 The application requires node runtime. If you are familiar with node and npm standard deployment/development workflow,
-you can skip to the <a href="#qs">Quick Setup</a> section below.
+you can skip to the <a href="#qs">Quick Setup</a> section below. Otherwise read on..
 
 <h3>Setup</h3>
 Given below is the overall setup process:
@@ -62,7 +62,7 @@ Given below is the overall setup process:
     </code>
 </p>
 <p>
-    For information on how to install git for you operating system please refer to:
+    For information on how to install git for your operating system please refer to:
     https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.
 </p>
 
@@ -78,7 +78,7 @@ Given below is the overall setup process:
 </p>
 
 <p>
-    For information on how to install nodejs for you operating system please refer to:
+    For information on how to install nodejs for your operating system please refer to:
     https://nodejs.org/en/download/package-manager/
 </p>
 
@@ -117,7 +117,7 @@ Given below is the overall setup process:
     </code>
 </p>
 
-<h4>Step 7: Start the server</h4>VTGQ
+<h4>Step 7: Start the server</h4>
 <p>
     <code>
         npm start
@@ -135,7 +135,7 @@ Given below is the overall setup process:
     http://git-scm.com/download/win
 </p>
 <p>
-    For information on how to install git for you operating system please refer to:
+    For information on how to install git for your operating system please refer to:
     https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.
 </p>
 
@@ -147,12 +147,13 @@ Given below is the overall setup process:
     </code>
 </p>
 <p>
-    For information on how to install nodejs for you operating system please refer to:
+    For information on how to install nodejs for your operating system please refer to:
     https://nodejs.org/en/download/package-manager/
 </p>
 
 
 <h4>Step 3: Clone the repo</h4>
+<p>Open command prompt or your favorite shell <b>as admin</b></p>
 <p>
     <code>
         git clone https://github.com/sumeet70/aiex.git
@@ -160,6 +161,7 @@ Given below is the overall setup process:
 </p>
 
 <h4>Step 4: Install bower</h4>
+<p>This step will usually fail if you don't run the following command <b>as admin</b></p>
 <p>
     <code>
         npm install bower -g
@@ -207,8 +209,7 @@ These instructions assume that you already have npm and git on your path
     <li>Navigate to http://localhost:8081</li>
 </ul>
 
-The application backend runs in node using express as middleware.
-The front end of the application has been written in Angularjs 1.4.
+The application backend runs in node using expressjs as middleware. The front end of the application has been written in Angularjs 1.4.
 
 <h2><a name="ug"></a> Usage Guide</h2>
 <p>
@@ -224,5 +225,3 @@ Simply open your browser and navigate to <b>http://localhost:8081</b>
 </ul>
 
 <h3>This project is under active development. Stay tuned for more.</h3>
-
-
