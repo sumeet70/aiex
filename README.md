@@ -228,11 +228,13 @@ Additionally, if you want to run cache operations, you need to run ignite with c
 In order to run ignite with REST api you need to load an optional library called <b>ignite-rest-http</b> <br/>
 Simply go to <b>/libs/optional</b> folder in the root directory of your install and copy <b>ignite-rest-http</b> folder to <b>/libs</b> and then restart ignite.
 </p>
+<p>Please visit ignite docs for additional information on ignite setup: https://apacheignite.readme.io/docs/getting-started</p>
 
 <h3>Enable Caching</h3>
 <p>
 To enable caching in ignite cluster you need to supply some basic configurations. When starting up your cluster, use one of the example configuration that already
 ships with ignite code: <b>/examples/config/example-cahce.xml</b></p>
+<p>Please visit ignite docs for additional information on ignite setup: https://apacheignite.readme.io/docs/getting-started</p>
 
 <p>
 You need to supply this configuration path as a command line parameter to ignite startup script ignite.sh (ignite.bat in windows command prompt).
