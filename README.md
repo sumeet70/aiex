@@ -119,11 +119,17 @@ Given below is the overall setup process:
 
 <h4>Step 7: Start the server</h4>
 <p>
+    Although it is recommended that you run the next command as is, but it can fail under certain circumstance. If that is the case, try running it as a sudoer.
+    One of the conditions under which it is likely to fail is if you set the default port to be port 80 in /config.json,
+    since port 80 access is blocked by some OS builds it only runs as sudo.
+    There can be other permissions issues along the way that might prevent you from starting up a node process without sudo.
+</p>
+<p>
     <code>
         npm start
     </code>
 </p>
-
+<p>If you run into security problems run <code> sudo npm start </code></p>
 
 <h2>Windows</h2>
 <p>
@@ -214,7 +220,40 @@ The application backend runs in node using expressjs as middleware. The front en
 <h2><a name="ug"></a> Usage Guide</h2>
 <p>
 The current version assumes that the ignite rest api is running on default localhost:8080 location.
-Simply open your browser and navigate to <b>http://localhost:8081</b>
+Additionally, if you want to run cache operations, you need to run ignite with caching enabled.
+</p>
+
+<h3>Enable REST Interface</h3>
+<p>
+In order to run ignite with REST api you need to load an optional library called <b>ignite-rest-http</b> <br/>
+Simply go to <b>/libs/optional</b> folder in the root directory of your install and copy <b>ignite-rest-http</b> folder to <b>/libs</b> and then restart ignite.
+</p>
+
+<h3>Enable Caching</h3>
+<p>
+To enable caching in ignite cluster you need to supply some basic configurations. When starting up your cluster, use one of the example configuration that already
+ships with ignite code: <b>/examples/config/example-cahce.xml</b></p>
+
+<p>
+You need to supply this configuration path as a command line parameter to ignite startup script ignite.sh (ignite.bat in windows command prompt).
+This script is located in /bin directory of your installation root. <br/>
+</p>
+
+<p>
+    You start up command should look like:<br/>
+
+    <b>[Install Dir]/bin/ignite.sh [Install Dir]/examples/config/example-cahce.xml</b><br/>
+    replace [Install Dir] with path to your installation directory.
+</p>
+
+<h3>Startup aiex</h3>
+<p>
+<ul>
+<li>Run <code>npm start</code> (refer to how to install section)</li>
+<li>Simply open your browser and navigate to <b>http://localhost:8081</b></li>
+<li>If you started the webpage before starting the cluster simply refresh the page or
+navigate to another tab and come back to topology tab to see the updated topology view.</li>
+</ul>
 </p>
 
 <h2><a name="uf"></a> Upcoming Features</h2>
