@@ -15,7 +15,7 @@ module.exports = function(){
         _.forEach(apiMethods, function(methodName){
             me[methodName] = function (req, res) {
                 try{
-                    logger.info(methodName);
+                    logger.info(req.query);
 
                     restServiceInstance.proxyCall(methodName, req.query).then(function(result){
                         res.send(result);

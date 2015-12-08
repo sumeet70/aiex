@@ -14,8 +14,10 @@ module.exports = function() {
             qs: query
             } , function (error, response, body) {
             if (error) {
+                logger.info(error);
                 deferred.reject(error);
             } else {
+                logger.info("Resolved");
                 deferred.resolve(body);
             }
         });

@@ -7,5 +7,6 @@ angular.module('app', [
     'ui.router',
     'ui.bootstrap',
     'oc.lazyLoad',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'smart-table'
 ]);

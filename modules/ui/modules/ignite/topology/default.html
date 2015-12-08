@@ -1,23 +1,97 @@
 <div ng-controller="TopologyController">
-    <div ng-repeat="node in nodes" class="col-sm-4" >
-        <div class="panel panel-default">
-            <div class="panel-heading">Node Id:  <span class="label bg-success">{{node.nodeId}}</span></div>
-            <div class="panel-body">
-                Attributes: <strong>{{node.attributes}}</strong><br>
-                Caches: <strong>{{node.caches}}</strong><br>
-                Consistent Id:<br/>
-                    <div class="m-l" ng-repeat="consistentId in node.consistentId">
-                        <strong>{{consistentId}}</strong>
+    <div class="row">
+        <div class="col-lg-4">
+            <table st-table="displayedNodes" st-safe-src="nodes" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th st-sort="Nodes"><i class="fa fa-laptop"></i> Nodes</th>
+                    </tr>
+                    <tr>
+                        <th colspan="5"><input st-search="" class="form-control" placeholder="search ..." type="text"/></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr st-select-row="node" ng-repeat="node in displayedNodes">
+                        <td>{{node.nodeId}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-8">
+            <tabset class="tab-container">
+                <tab>
+                    <tab-heading>
+                        <i class="fa fa-bookmark"></i> Summary
+                    </tab-heading>
+                    <div>
+                        Node Id:<span class="label bg-success">{{selectedNode.nodeId}}</span><br/>
+                        Consistent Id:<br/>
+                        <div class="m-l" repeat="consistentId in selectedNode.consistentId">
+                            <strong>{{consistentId}}</strong>
+                        </div>
+                        DefaultCacheMode: <strong>{{selectedNode.defaultCacheMode}}</strong><br/>
+                        Tcp Addresses: <br>
+                        <div class="m-l" ng-repeat="address in selectedNode.tcpAddresses">
+                            <strong>{{address}}</strong>
+                        </div>
+                        Tcp Host Names: <strong>{{selectedNode.tcpHostNames}}</strong><br/>
+                        Tcp Port: <strong>{{selectedNode.tcpPort}}</strong><br/>
+
                     </div>
-                DefaultCacheMode: <strong>{{node.defaultCacheMode}}</strong><br>
-                Metrics: <strong>{{node.metrics}}</strong><br>
-                Tcp Addresses: <br>
-                    <div class="m-l" ng-repeat="address in node.tcpAddresses">
-                        <strong>{{address}}</strong>
+                </tab>
+                <tab>
+                    <tab-heading>
+                        <i class="glyphicon glyphicon-signal"></i> Metrics
+                    </tab-heading>
+                    <div>
+                        <table st-table="displayedMetrics" st-safe-src="metrics" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th st-sort="name"><i class="fa fa-key"></i> Name</th>
+                                    <th><i class="fa fa-info"></i> Value</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        <input st-search="" class="input-sm form-control" placeholder="search metric name or value..." type="search"/>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="metric in displayedMetrics">
+                                    <td>{{metric.name}}</td>
+                                    <td>{{metric.val}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                Tcp Host Names: <strong>{{node.tcpHostNames}}</strong><br>
-                Tcp Port: <strong>{{node.tcpPort}}</strong><br>
-            </div>
+                </tab>
+                <tab>
+                    <tab-heading>
+                        <i class="fa fa-sitemap"></i> Attributes
+                    </tab-heading>
+                    <div>
+                        <table st-table="displayedAttributes" st-safe-src="attributes" class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th st-sort="name"><i class="fa fa-key"></i> Name</th>
+                                <th><i class="fa fa-info"></i> Value</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">
+                                    <input st-search="" class="input-sm form-control" placeholder="search attribute name or value..." type="search"/>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="attribute in displayedAttributes">
+                                <td>{{attribute.name}}</td>
+                                <td>{{attribute.val}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </tab>
+            </tabset>
         </div>
     </div>
 </div>
