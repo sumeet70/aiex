@@ -25,7 +25,12 @@ aeix can currently shows a basic view of topology and supports invocation of all
 
 
 <h3>Basic Topology Viewer</h3>
-<img src="https://cloud.githubusercontent.com/assets/2068430/11163111/8e9451d0-8ae9-11e5-81eb-09060e198b40.png" />
+<ul>
+    <li>List of nodes searchable by nodeid</li>
+    <li>Summary, Metrics and Attribute information</li>
+    <li>Searchable metrics and attribute names and values</li>
+</ul>
+<img src="https://cloud.githubusercontent.com/assets/2068430/11672539/8c992de0-9e37-11e5-9f6a-dca38fd1170f.png" />
 
 <h3>Cache Operations</h3>
 <img src="https://cloud.githubusercontent.com/assets/2068430/11163114/a6fb9062-8ae9-11e5-8853-3a0142c40fc6.png" />
