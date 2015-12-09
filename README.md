@@ -24,7 +24,7 @@ aeix can currently shows a basic view of topology and supports invocation of all
 </ul>
 
 
-<h3>Basic Topology Viewer</h3>
+<h3>Topology Viewer</h3>
 <ul>
     <li>List of nodes searchable by nodeid</li>
     <li>Summary, Metrics and Attribute information</li>
