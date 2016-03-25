@@ -1,36 +1,13 @@
 {
-  "name": "BootstrapAngularAdminWebApp",
-  "version": "2.0.2-0",
+  "name": "aeixui",
+  "version": "0.0.1",
   "authors": [
-    "Flatfull"
+    "Sumeet Singh"
   ],
-  "description": "Admin web application template with Bootstrap 3 and AngularJS.",
-  "keywords": [
-    "AngularJS",
-    "admin",
-    "admin",
-    "dashboard",
-    "admin",
-    "panel",
-    "app",
-    "charts",
-    "components",
-    "flat",
-    "flat",
-    "ui",
-    "responsive",
-    "responsive",
-    "layout",
-    "ui",
-    "kit",
-    "ui",
-    "route",
-    "web",
-    "app",
-    "widgets"
-  ],
-  "license": "Envato REGULAR LICENSE",
-  "homepage": "http://themeforest.net/item/angulr-bootstrap-admin-web-app-with-angularjs/8437259",
+  "description": "Web UI for aeix",
+  "keywords": ["Apache Ignite", "Aeix", "Ignite REST API"],
+  "license": "GPL",
+  "homepage": "",
   "private": true,
   "ignore": [
     "**/.*",
