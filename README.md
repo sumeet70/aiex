@@ -131,6 +131,7 @@ Given below is the overall setup process:
 </p>
 <p>
     <code>
+        export IGNITE_REST=localhost:8080 #optional
         npm start
     </code>
 </p>
@@ -202,6 +203,7 @@ Given below is the overall setup process:
 <h4>Step 7: Start the server</h4>
 <p>
     <code>
+        export IGNITE_REST=localhost:8080 #optional
         npm start
     </code>
 </p>
@@ -215,6 +217,7 @@ These instructions assume that you already have npm and git on your path
     <li>Run the following commands: <br/>
         <b>&nbsp;&nbsp; npm install</b><br/>
         <b>&nbsp;&nbsp; bower install</b><br/>
+        <b>&nbsp;&nbsp; export IGNITE_REST=localhost:8080 #optional</b><br/>
         <b>&nbsp;&nbsp; npm start</b><br/>
     </li>
     <li>Navigate to http://localhost:8081</li>
