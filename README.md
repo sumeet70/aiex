@@ -1,6 +1,6 @@
 # aiex
 Apache Ignite Extensions
-maintainer needed
+##maintainer needed
 
 <ul>
     <li><a href="#s">Summary</a></li>
